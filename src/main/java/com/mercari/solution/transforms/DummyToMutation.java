@@ -17,6 +17,7 @@ import com.google.cloud.storage.BlobId;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
 import com.google.common.io.CharStreams;
+import org.apache.beam.sdk.extensions.avro.coders.AvroCoder;
 import com.google.common.hash.Hashing;
 import org.apache.beam.sdk.coders.*;
 import org.apache.beam.sdk.io.range.OffsetRange;

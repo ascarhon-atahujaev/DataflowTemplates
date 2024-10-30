@@ -10,7 +10,7 @@ import com.google.datastore.v1.Entity;
 import com.mercari.solution.util.converter.RecordToEntityConverter;
 import org.apache.beam.sdk.Pipeline;
 import org.apache.beam.sdk.coders.SerializableCoder;
-import org.apache.beam.sdk.io.AvroIO;
+import org.apache.beam.sdk.extensions.avro.io.AvroIO;
 import org.apache.beam.sdk.io.gcp.datastore.DatastoreIO;
 import org.apache.beam.sdk.options.Description;
 import org.apache.beam.sdk.options.PipelineOptions;
