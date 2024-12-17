@@ -96,6 +96,7 @@ public class BigQueryToSpannerDelete {
                         ValueProvider.StaticValueProvider.of(Mutation.Op.DELETE.name()),
                         options.getKeyFields())))
                 .apply("DeleteMutation", SpannerIO.write()
+                        .withHighPriority()
                         .withProjectId(options.getProjectId())
                         .withInstanceId(options.getInstanceId())
                         .withDatabaseId(options.getDatabaseId()));

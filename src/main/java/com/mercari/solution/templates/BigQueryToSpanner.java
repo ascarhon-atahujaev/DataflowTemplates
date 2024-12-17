@@ -119,6 +119,7 @@ public class BigQueryToSpanner {
                         options.getTable(), options.getMutationOp())).withSideInputs(dummyStruct))
                 .apply("StoreSpanner", SpannerIO.write()
                         .withFailureMode(SpannerIO.FailureMode.REPORT_FAILURES)
+                        .withHighPriority()
                         .withProjectId(options.getProjectId())
                         .withInstanceId(options.getInstanceId())
                         .withDatabaseId(options.getDatabaseId()));
